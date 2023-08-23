@@ -1,4 +1,25 @@
-# CodeIgniter 4 Application Starter
+# TUGAS 1 TRAINING IT
+
+# Team
+Calvin Nickholas Kurniawan - Universitas Negeri Semarang - nickholascalvin1@gmail.com
+Dede Maulana - Universitas Bina Sarana Informatika - dedemaulana162@gmail.com
+Edo Laksana Widodo - Universitas Lampung - edolaksana12@gmail.com
+Erlangga Bagus Prasetyo - argelznozel@gmail.com
+Muhammad Alimul Fadli Naufal - Universitas Negeri Surabaya - fadliannaufal30@gmail.com
+M Rafli Aditya - Institut Pertanian Bogor - rafli14aditya@gmail.com
+Muhammad Rosyid Ridho - Universitas Negeri Malang - rsyidh23@gmail.com
+Rendy Lutfi Prabowo - Universitas Lampung - rendylutfiprabowo123@gmail.com
+Reza Daffa Zaki Pratama - Muhammadiyah Surakarta - rezadzp@gmail.com
+Wan Muhammad Fikri Aushaf - Institut Pertanian Bogor - wan.aushaf@gmail.com
+
+# Dokumentasi
+Docs : https://docs.google.com/document/d/1Scw6bE7LKXIATLpgnx4n0TGqcKYaVJi_3ShBz3Kzy90/edit?usp=sharing
+Miro : https://miro.com/app/board/uXjVMrjs5Ik=/
+Figma : https://www.figma.com/files/project/103971019/KELOMPOK-6-JAYA-JAYA?fuid=908529643800458197
+
+
+
+
 
 ## What is CodeIgniter?
 

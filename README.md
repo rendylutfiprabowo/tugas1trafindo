@@ -17,6 +17,7 @@ Docs : https://docs.google.com/document/d/1Scw6bE7LKXIATLpgnx4n0TGqcKYaVJi_3ShBz
 Miro : https://miro.com/app/board/uXjVMrjs5Ik=/                                                                 
 Figma : https://www.figma.com/files/project/103971019/KELOMPOK-6-JAYA-JAYA?fuid=908529643800458197               
 
+# php spark db:create
  
 ## What is CodeIgniter?
 

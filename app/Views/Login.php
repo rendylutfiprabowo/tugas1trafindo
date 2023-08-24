@@ -1,77 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In Gas</title>
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Snippet - GoSNippets</title>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            background-color: red;
+            height: 100vh;
+            font-family: 'Poppins';
+            background: linear-gradient(to top, white 10%, red 90%) no-repeat
+        }
+
+        .wrapper {
+            max-width: 500px;
+            border-radius: 10px;
+            margin: 50px auto;
+            padding: 30px 40px;
+            box-shadow: 20px 20px 80px rgb(206, 206, 206)
+        }
+
+        .h1 {
+
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: red;
+            font-style: bold;
+        }
+
+        .h4 {
+            font-family: 'Poppins',
+        }
+
+        .input-field {
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid red;
+            color: red
+        }
+
+        .input-field:hover {
+            color: grey;
+            ;
+            border: 1px solid grey;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            width: 100%;
+            padding: 0px 2px;
+            font-family: 'Poppins',
+        }
+
+        .fa-eye-slash.btn {
+            border: none;
+            outline: none;
+            box-shadow: none
+        }
+
+        a {
+            text-decoration: none;
+            color: red;
+            font-weight: 700
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: grey;
+        }
+
+        .option {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer
+        }
+
+        .option label.text-muted {
+            display: block;
+            cursor: pointer
+        }
+
+        .option input {
+            display: none
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            border: 1px solid grey;
+            border-radius: 50%;
+            cursor: pointer
+        }
+
+        .option input:checked~.checkmark:after {
+            display: block
+        }
+
+        .option .checkmark:after {
+            content: "";
+            width: 13px;
+            height: 13px;
+            display: block;
+            background: red;
+            position: absolute;
+            top: 48%;
+            left: 53%;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 300ms ease-in-out 0s
+        }
+
+        .option input[type="radio"]:checked~.checkmark {
+            background: white;
+            transition: 300ms ease-in-out 0s;
+            border: 1px solid red
+        }
+
+        .option input[type="radio"]:checked~.checkmark:after {
+            transform: translate(-50%, -50%) scale(1)
+        }
+
+        .btn.btn-block {
+            border-radius: 20px;
+            background-color: red;
+            color: white;
+
+        }
+
+        .btn.btn-block:hover {
+            background-color: grey
+        }
+
+        @media(max-width: 575px) {
+            .wrapper {
+                margin: 10px
+            }
+        }
+
+        @media(max-width:424px) {
+            .wrapper {
+                padding: 30px 10px;
+                margin: 5px
+            }
+
+            .option {
+                position: relative;
+                padding-left: 22px
+            }
+
+            .option label.text-muted {
+                font-size: 0.95rem
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 2px
+            }
+
+            .option .checkmark:after {
+                top: 50%
+            }
+
+            #forgot {
+                font-size: 0.95rem
+            }
+        }
+    </style>
+   
 </head>
 
-<body>
-    <div class="container">
-        <form>
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <input type="email" id="form2Example1" class="form-control" />
-                <label class="form-label" for="form2Example1">Email address</label>
-            </div>
-
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-                <input type="password" id="form2Example2" class="form-control" />
-                <label class="form-label" for="form2Example2">Password</label>
-            </div>
-
-            <!-- 2 column grid layout for inline styling -->
-            <div class="row mb-4">
-                <div class="col d-flex justify-content-center">
-                    <!-- Checkbox -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                        <label class="form-check-label" for="form2Example31"> Remember me </label>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <!-- Simple link -->
-                    <a href="#!">Forgot password?</a>
+<body oncontextmenu='return false' class='snippet-body'>
+    <div class="wrapper bg-white">
+        <img style="display: block;margin-left: auto; margin-right: auto;" src="..\img\Logo Trafoindo.png" width="230px" alt="">
+        <div style="font-family: poppins; font-weight: bold;" class="h1 text-center"><strong>Task Tracker</strong></div>
+        <div class="h4 text-muted text-center pt-2">LOG IN</div>
+        <form class="pt-3">
+            <div class="form-group py-2">
+                <div class="input-field"> <span class="far fa-user p-2"></span>
+                    <input type="text" placeholder="Username or Email Address" required class="">
                 </div>
             </div>
-
-            <!-- Submit button -->
-            <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-
-            <!-- Register buttons -->
-            <div class="text-center">
-                <p>Not a member? <a href="#!">Register</a></p>
-                <p>or sign up with:</p>
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                </button>
-
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                </button>
+            <div class="form-group py-1 pb-2">
+                <div class="input-field"> <span class="fas fa-lock p-2"></span>
+                    <input type="text" placeholder="Enter your Password" required class=""> //buttno</button>
+                </div>
             </div>
+            <div class="d-flex align-items-start mt-3">
+                <div class="remember"> <label class="option text-muted"> Remember me <input type="radio" name="radio"> <span class="checkmark"></span> </label> </div>
+                <div class="ml-auto"> <a style="text-decoration:none; color: red;" href="#" id="forgot">Forgot Password?</a> </div>
+            </div> <button class="btn btn-block text-center my-3 mt-5"><b>Log in</b></button>
+            <div class="text-center pt-3 text-muted">Belum punya akun? <a style="text-decoration:none; color: red;" href="#">Sign up</a></div>
         </form>
     </div>
-
+    <script type='text/javascript'></script>
 </body>
 
 </html>

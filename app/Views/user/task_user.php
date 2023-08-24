@@ -24,7 +24,7 @@
                 <div class="card">
 
                     <div class="d-flex justify-content-between align-items-center">
-
+<h1>nanti ya, cape mikkirn view</h1>
                         <span class="font-weight-bold">Weekly Tasks</span>
 
                         <div class="d-flex flex-row">

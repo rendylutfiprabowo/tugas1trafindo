@@ -17,10 +17,10 @@
         }
 
         body {
-            background-color: red;
+            background-color:#c82424;
             height: 100vh;
             font-family: 'Poppins';
-            background: linear-gradient(to top, white 10%, red 90%) no-repeat
+            background: linear-gradient(to top, white 10%,#c82424 90%) no-repeat
         }
 
         .wrapper {
@@ -35,7 +35,7 @@
 
             font-size: 3.5rem;
             font-weight: bold;
-            color: red;
+            color:#c82424;
             font-style: bold;
         }
 
@@ -49,14 +49,14 @@
             display: flex;
             align-items: center;
             cursor: pointer;
-            border: 1px solid red;
-            color: red
+            border: 1px solid#c82424;
+            color:#c82424
         }
 
         .input-field:hover {
-            color: grey;
+            color: #aca7a6;
             ;
-            border: 1px solid grey;
+            border: 1px solid #aca7a6;
         }
 
         input {
@@ -76,13 +76,13 @@
 
         a {
             text-decoration: none;
-            color: red;
+            color:#c82424;
             font-weight: 700
         }
 
         a:hover {
             text-decoration: none;
-            color: grey;
+            color: #aca7a6;
         }
 
         .option {
@@ -107,7 +107,7 @@
             height: 20px;
             width: 20px;
             background-color: white;
-            border: 1px solid grey;
+            border: 1px solid #aca7a6;
             border-radius: 50%;
             cursor: pointer
         }
@@ -121,7 +121,7 @@
             width: 13px;
             height: 13px;
             display: block;
-            background: red;
+            background:#c82424;
             position: absolute;
             top: 48%;
             left: 53%;
@@ -133,7 +133,7 @@
         .option input[type="radio"]:checked~.checkmark {
             background: white;
             transition: 300ms ease-in-out 0s;
-            border: 1px solid red
+            border: 1px solid#c82424
         }
 
         .option input[type="radio"]:checked~.checkmark:after {
@@ -142,13 +142,13 @@
 
         .btn.btn-block {
             border-radius: 20px;
-            background-color: red;
+            background-color:#c82424;
             color: white;
 
         }
 
         .btn.btn-block:hover {
-            background-color: grey
+            background-color: #aca7a6
         }
 
         @media(max-width: 575px) {
@@ -193,7 +193,7 @@
     <div class="wrapper bg-white">
         <img style="display: block;margin-left: auto; margin-right: auto;" src="..\img\Logo Trafoindo.png" width="230px" alt="">
         <div style="font-family: poppins; font-weight: bold;" class="h1 text-center"><strong>Task Tracker</strong></div>
-        <div class="h4 text-muted text-center pt-2">LOG IN</div>
+        <div class="h2 text-muted text-center pt-2"><strong>LOG IN</strong></div>
         <form class="pt-3">
             <div class="form-group py-2">
                 <div class="input-field"> <span class="far fa-user p-2"></span>
@@ -207,9 +207,9 @@
             </div>
             <div class="d-flex align-items-start mt-3">
                 <div class="remember"> <label class="option text-muted"> Remember me <input type="radio" name="radio"> <span class="checkmark"></span> </label> </div>
-                <div class="ml-auto"> <a style="text-decoration:none; color: red;" href="#" id="forgot">Forgot Password?</a> </div>
+                <div class="ml-auto"> <a style="text-decoration:none; color:#c82424;" href="#" id="forgot">Forgot Password?</a> </div>
             </div> <button class="btn btn-block text-center my-3 mt-5"><b>Log in</b></button>
-            <div class="text-center pt-3 text-muted">Belum punya akun? <a style="text-decoration:none; color: red;" href="#">Sign up</a></div>
+            <div class="text-center pt-3 text-muted">Belum punya akun? <a style="text-decoration:none; color:#c82424;" href="#">Sign up</a></div>
         </form>
     </div>
     <script type='text/javascript'></script>

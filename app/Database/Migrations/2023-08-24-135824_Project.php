@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Product extends Migration
+class Project extends Migration
 {
     public function up()
     {
@@ -14,28 +14,27 @@ class Product extends Migration
                 'constraint' => 10,
                 'auto_increment' => true
             ],
-            'nama_product' => [
+            'nama_project' => [
                 'type' => 'VARCHAR',
                 'constraint' => '225',
             ],
-            'desc_product' => [
+            'desc_project' => [
                 'type' => 'VARCHAR',
                 'constraint' => '225'
             ],
-            'id_user' => [
-                'type' => 'INT',
-                'constraint' =>10,
+            'tgl_project' => [
+                'type' => 'datetime',
                 
             ],
             // ... add other columns
         ]);
           
         $this->forge->addKey('id', true);
-        $this->forge->createTable('product');
+        $this->forge->createTable('project');
     }
     
     public function down()
     {
-        $this->forge->dropTable('product');
+        $this->forge->dropTable('project');
     }
 }

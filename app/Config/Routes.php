@@ -33,6 +33,10 @@ $routes->get('/', 'Login::index');
 $routes->get('/login', 'Login::index');
 $routes->get('/task_user', 'User::index');
 
+// ROUTE ADMIN
+$routes->get('/project', 'Project::index');
+$routes->get('/product', 'Product::index');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

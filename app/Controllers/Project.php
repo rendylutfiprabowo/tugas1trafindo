@@ -8,6 +8,6 @@ class Project extends BaseController
 {
     public function index()
     {
-        //
+        return view('admin/project_admin');
     }
 }

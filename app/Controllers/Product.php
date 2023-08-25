@@ -8,6 +8,6 @@ class Product extends BaseController
 {
     public function index()
     {
-        //
+        return view('/admin/product_admin');
     }
 }

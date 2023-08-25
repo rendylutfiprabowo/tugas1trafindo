@@ -17,10 +17,10 @@
         }
 
         body {
-            background-color:#c82424;
+            background-color: #c82424;
             height: 100vh;
             font-family: 'Poppins';
-            background: linear-gradient(to top, white 10%,#c82424 90%) no-repeat
+            background: linear-gradient(to top, white 10%, #c82424 90%) no-repeat
         }
 
         .wrapper {
@@ -35,7 +35,7 @@
 
             font-size: 3.5rem;
             font-weight: bold;
-            color:#c82424;
+            color: #c82424;
             font-style: bold;
         }
 
@@ -50,7 +50,7 @@
             align-items: center;
             cursor: pointer;
             border: 1px solid#c82424;
-            color:#c82424
+            color: #c82424
         }
 
         .input-field:hover {
@@ -76,7 +76,7 @@
 
         a {
             text-decoration: none;
-            color:#c82424;
+            color: #c82424;
             font-weight: 700
         }
 
@@ -121,7 +121,7 @@
             width: 13px;
             height: 13px;
             display: block;
-            background:#c82424;
+            background: #c82424;
             position: absolute;
             top: 48%;
             left: 53%;
@@ -142,7 +142,7 @@
 
         .btn.btn-block {
             border-radius: 20px;
-            background-color:#c82424;
+            background-color: #c82424;
             color: white;
 
         }
@@ -186,7 +186,7 @@
             }
         }
     </style>
-   
+
 </head>
 
 <body oncontextmenu='return false' class='snippet-body'>
@@ -194,15 +194,15 @@
         <img style="display: block;margin-left: auto; margin-right: auto;" src="..\img\Logo Trafoindo.png" width="230px" alt="">
         <div style="font-family: poppins; font-weight: bold;" class="h1 text-center"><strong>Task Tracker</strong></div>
         <div class="h2 text-muted text-center pt-2"><strong>LOG IN</strong></div>
-        <form class="pt-3">
+        <form method="post" action="<?= base_url("/checklogin"); ?>" class="pt-3">
             <div class="form-group py-2">
                 <div class="input-field"> <span class="far fa-user p-2"></span>
-                    <input type="text" placeholder="Username or Email Address" required class="">
+                    <input name="email_user" id="email_user" type="email" placeholder="Email Address" required class="">
                 </div>
             </div>
             <div class="form-group py-1 pb-2">
                 <div class="input-field"> <span class="fas fa-lock p-2"></span>
-                    <input type="text" placeholder="Enter your Password" required class=""> //buttno</button>
+                    <input name="password_user" type="password" placeholder="Enter your Password" required class=""></button>
                 </div>
             </div>
             <div class="d-flex align-items-start mt-3">

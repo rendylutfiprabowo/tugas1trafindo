@@ -17,24 +17,54 @@ class Login extends BaseController
         $User = new User();
 
         $email = $this->request->getPost('email_user');
-        $password = $this->request->getPost('password_user');
+        $password = $this->request->getVar('password_user');
 
-        $result = $User->where('email_user', $email)->first();
+        $result = $User->where(['email_user' => $email])->first();
 
-        if ($result->id > 0) {
-            if (password_verify($password, $result->password_user)) {
+        if ($result !== null) {
 
-                session()->set("user", $result);
-                if ($result['role_user'] == '1') {
-                    return redirect()->to('/task_user');
-                } else if ($result['role_user'] == '2') {
-                    return redirect()->to('/dashboarduser');
+            if ($result->id) {
+
+                if (password_verify($password, $result->password_user)) {
+                    session()->set([
+                        'nama_user' => $result->nama_user,
+                        'email_user' => $result->email_user,
+                        'role_user' => $result->role_user
+                    ]);
+                    $user_data = [
+                        'title' => 'Login',
+                        'nama_user' => $result->nama_user,
+                        'email_user' => $result->email_user,
+                        'role_user' => $result->role_user
+                    ];
+                    $this->session->set($user_data);
+                    if (session()->get('role_user') == '1') {
+                        return redirect()->to('/task_user');
+                    } elseif (session()->get('role_user') == '2') {
+                        return redirect()->to('/dashboarduser');
+                    }
+                } else {
+                    $session = session();
+                    $session->setFlashdata('error', 'Email & Password Salah');
+                    return redirect()->back();
                 }
             } else {
-                echo 'Invalid email or password';
+                $session = session();
+                $session->setFlashdata('error', 'Email & Password Salah');
+                return redirect()->back();
             }
         } else {
-            echo 'Invalid email or password';
+            $session = session();
+            $session->setFlashdata('error', 'Email & Password Salah');
+            return redirect()->back();
         }
+    }
+
+    public function logout()
+    {
+        // Hapus data pengguna dari sesi
+        session()->destroy();
+
+        return view('Login');
     }
 }

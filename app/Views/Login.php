@@ -195,6 +195,11 @@
         <div style="font-family: poppins; font-weight: bold;" class="h1 text-center"><strong>Task Tracker</strong></div>
         <div class="h2 text-muted text-center pt-2"><strong>LOG IN</strong></div>
         <form method="post" action="<?= base_url("/checklogin"); ?>" class="pt-3">
+            <?php if (session()->has('error')) : ?>
+                <div class="alert alert-danger">
+                    <?= session('error') ?>
+                </div>
+            <?php endif; ?>
             <div class="form-group py-2">
                 <div class="input-field"> <span class="far fa-user p-2"></span>
                     <input name="email_user" id="email_user" type="email" placeholder="Email Address" required class="">

@@ -37,7 +37,7 @@ $routes->get('/task_user', 'User::index');
 $routes->get('project', 'Project::index');
 $routes->get('product', 'Product::index');
 
-$routes->post('/checklogin', "Login:do_login");
+$routes->post('/checklogin', "Login::do_login");
 
 
 /*

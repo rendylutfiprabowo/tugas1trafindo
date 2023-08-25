@@ -32,6 +32,7 @@ class Product extends Migration
           
         $this->forge->addKey('id', true);
         $this->forge->createTable('product');
+        $this->forge->addForeignKey('id_user', 'user', 'id', 'CASCADE', 'CASCADE');
     }
     
     public function down()

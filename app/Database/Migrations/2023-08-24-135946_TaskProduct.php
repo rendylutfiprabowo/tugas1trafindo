@@ -32,6 +32,7 @@ class TaskProduct extends Migration
           
         $this->forge->addKey('id', true);
         $this->forge->createTable('task_product');
+        $this->forge->addForeignKey('id_product', 'product', 'id', 'CASCADE', 'CASCADE');
     }
     
     public function down()

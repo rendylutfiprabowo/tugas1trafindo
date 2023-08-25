@@ -32,6 +32,7 @@ class Notes extends Migration
           
         $this->forge->addKey('id', true);
         $this->forge->createTable('notes');
+        $this->forge->addForeignKey('id_task', 'task_project', 'id', 'CASCADE', 'CASCADE');
     }
     
     public function down()

@@ -19,11 +19,15 @@
 </head>
 
 <style>
-    @font-face /*perintah untuk memanggil font eksternal*/
-  {
-    font-family: 'shelf_life'; /*memberikan nama bebas untuk font*/
-    src: url('../template/shelf_life/shelf_life.otf');/*memanggil file font eksternalnya di folder nexa*/
-  }
+    @font-face
+
+    /*perintah untuk memanggil font eksternal*/
+        {
+        font-family: 'shelf_life';
+        /*memberikan nama bebas untuk font*/
+        src: url('../template/shelf_life/shelf_life.otf');
+        /*memanggil file font eksternalnya di folder nexa*/
+    }
 </style>
 
 <body class="  ">
@@ -37,10 +41,10 @@
     <div class="wrapper">
         <!-- SIDEBAR -->
         <div class="iq-sidebar  sidebar-default ">
-            <div class="iq-sidebar-logo d-flex align-items-center">
-                <a style="align-items: center" href="#" class="header-logo">
+            <div class="iq-sidebar-logo d-flex align-items-center mb-0 my-2">
+                <a href="#" class="header-logo pt-6">
                     <img style="margin-right: 20px;" src="..\img\Logo Trafoindo.png">
-                    <h5  style="font-family:shelf_life; color:#c82424; font-size: 35px;" class="logo-title light-logo">Task Management</h5>
+                    <h5 style="font-family:shelf_life; color:#c82424; font-size: 35px;" class="logo-title light-logo">Task Management</h5>
                 </a>
                 <div class="iq-menu-bt-sidebar ml-0">
                     <i class="las la-bars wrapper-menu"></i>
@@ -48,9 +52,8 @@
             </div>
             <div class="data-scrollbar" data-scroll="1">
                 <nav class="iq-sidebar-menu">
-                    <ul id="iq-sidebar-toggle" class="iq-menu">
-
-                        <li class="">
+                    <ul id="iq-sidebar-toggle" class="iq-menu" >
+                        <li class="" >
                             <a href="/project_user" class="svg-icon">
                                 <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -82,24 +85,7 @@
 
                     </ul>
                 </nav>
-                <div id="sidebar-bottom" class="position-relative sidebar-bottom">
-                    <div class="card border-none mb-0 shadow-none">
-                        <div class="card-body p-0">
-                            <div class="sidebarbottom-content">
-                                <h5 class="mb-3">Task Performed</h5>
-                                <div id="circle-progress-6" class="sidebar-circle circle-progress circle-progress-primary mb-4" data-min-value="0" data-max-value="100" data-value="55" data-type="percent"></div>
-                                <div class="custom-control custom-radio mb-1">
-                                    <input type="radio" id="customRadio6" name="customRadio-1" class="custom-control-input" checked="">
-                                    <label class="custom-control-label" for="customRadio6">Performed task</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio7" name="customRadio-1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio7">Incomplete Task</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="pt-5 pb-2"></div>
             </div>
         </div>

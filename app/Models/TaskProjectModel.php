@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TaskProduct extends Model
+class TaskProjectModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'taskproducts';
+    protected $table            = 'taskprojects';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';

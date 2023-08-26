@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Note extends Model
+class ProductModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'notes';
+    protected $table            = 'products';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';

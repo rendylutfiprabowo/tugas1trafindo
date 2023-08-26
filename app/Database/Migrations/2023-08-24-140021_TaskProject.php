@@ -16,23 +16,23 @@ class TaskProject extends Migration
             ],
             'id_taskproduct' => [
                 'type' => 'INT',
-                'constraint' =>10,
-                
+                'constraint' => 10,
+
             ],
             'id_project' => [
                 'type' => 'INT',
-                'constraint' =>10,
-                
+                'constraint' => 10,
+
             ],
             // ... add other columns
         ]);
-          
+
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('id_taskproduct', 'product', 'id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('id_project', 'project', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('task_project');
     }
-    
+
     public function down()
     {
         $this->forge->dropTable('task_project');

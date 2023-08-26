@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use \App\Models\User;
+use \App\Models\UserModel;
 
 class Login extends BaseController
 {
@@ -14,7 +14,7 @@ class Login extends BaseController
 
     public function do_login()
     {
-        $User = new User();
+        $User = new UserModel();
 
         $email = $this->request->getPost('email_user');
         $password = $this->request->getVar('password_user');
@@ -39,9 +39,9 @@ class Login extends BaseController
                     ];
                     $this->session->set($user_data);
                     if (session()->get('role_user') == '1') {
-                        return redirect()->to('/task_user');
+                        return redirect()->to('product');
                     } elseif (session()->get('role_user') == '2') {
-                        return redirect()->to('/dashboarduser');
+                        return redirect()->to('/task_user');
                     }
                 } else {
                     $session = session();

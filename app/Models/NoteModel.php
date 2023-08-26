@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Project extends Model
+class NoteModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'projects';
+    protected $table            = 'notes';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';

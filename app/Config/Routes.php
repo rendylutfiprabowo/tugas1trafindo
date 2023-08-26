@@ -38,6 +38,7 @@ $routes->get('project', 'Project::index');
 $routes->get('product', 'Product::index');
 
 $routes->post('/checklogin', "Login::do_login");
+$routes->get('/logout', "Login::logout");
 
 
 /*

@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="../template/assets/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css">
 </head>
 
+<style>
+    @font-face /*perintah untuk memanggil font eksternal*/
+  {
+    font-family: 'shelf_life'; /*memberikan nama bebas untuk font*/
+    src: url('../template/shelf_life/shelf_life.otf');/*memanggil file font eksternalnya di folder nexa*/
+  }
+</style>
+
 <body class="  ">
     <!-- loader Start -->
     <div id="loading">
@@ -30,9 +38,9 @@
         <!-- SIDEBAR -->
         <div class="iq-sidebar  sidebar-default ">
             <div class="iq-sidebar-logo d-flex align-items-center">
-                <a href="../backend/index.html" class="header-logo">
-                    <img src="..\img\Logo Trafoindo.png">
-                    <h5 style="font-family: poppins; color:#c82424;" class="logo-title light-logo">Task Management</h5>
+                <a style="align-items: center" href="#" class="header-logo">
+                    <img style="margin-right: 20px;" src="..\img\Logo Trafoindo.png">
+                    <h5  style="font-family:shelf_life; color:#c82424; font-size: 35px;" class="logo-title light-logo">Task Management</h5>
                 </a>
                 <div class="iq-menu-bt-sidebar ml-0">
                     <i class="las la-bars wrapper-menu"></i>

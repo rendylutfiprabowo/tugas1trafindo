@@ -319,16 +319,15 @@
 
 
     <!-- -------------------------FOOTER ------------------------------------------------------------------- -->
-    <footer class="iq-footer">
+
+
+    <footer style="background-color:  #aca7a5;" class="iq-footer">
         <div class="container-fluid">
             <div class="row">
 
-                <div class="col-lg-6 text-right">
-                    <span class="mr-1">
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>©
-                    </span> <a href="#" class=""><B>tim asix trafindo msib 5</B></a>.
+                <div class="col-lg-12 text-center">
+                   
+                    <a href="#" style="color:white;"><b>2023 © tim asix trafindo msib 5</b></a>.
                 </div>
             </div>
         </div>

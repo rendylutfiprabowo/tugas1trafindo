@@ -52,8 +52,8 @@
             </div>
             <div class="data-scrollbar" data-scroll="1">
                 <nav class="iq-sidebar-menu">
-                    <ul id="iq-sidebar-toggle" class="iq-menu" >
-                        <li class="" >
+                    <ul id="iq-sidebar-toggle" class="iq-menu">
+                        <li class="">
                             <a href="/project_user" class="svg-icon">
                                 <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -96,7 +96,7 @@
                     <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                         <i class="ri-menu-line wrapper-menu"></i>
                         <a href="../backend/index.html" class="header-logo">
-                            <h4 class="logo-title text-uppercase">Webkit</h4>
+                            <h4 class="logo-title text-uppercase">TIM ASIX</h4>
 
                         </a>
                     </div>
@@ -328,7 +328,7 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>©
-                    </span> <a href="#" class="">Webkit</a>.
+                    </span> <a href="#" class=""><B>tim asix trafindo msib 5</B></a>.
                 </div>
             </div>
         </div>

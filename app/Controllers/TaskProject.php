@@ -8,6 +8,6 @@ class TaskProject extends BaseController
 {
     public function index()
     {
-        //
+        return view('user/project_user');
     }
 }

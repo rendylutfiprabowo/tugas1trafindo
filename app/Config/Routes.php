@@ -31,7 +31,12 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Login::index');
 $routes->get('Login', 'Login::index');
+
+// ROUTE USER
+$routes->get('user/template', 'User::template');
 $routes->get('/task_user', 'User::index');
+$routes->get('/project_user', 'TaskProject::index');
+$routes->get('/note_user', 'Note::index');
 
 // ROUTE ADMIN
 $routes->get('project', 'Project::index');

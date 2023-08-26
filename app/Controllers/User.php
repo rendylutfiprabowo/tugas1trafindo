@@ -10,4 +10,9 @@ class User extends BaseController
     {
         return view('user/task_user');
     }
+
+    public function template()
+    {
+        return view('user/template');
+    }
 }

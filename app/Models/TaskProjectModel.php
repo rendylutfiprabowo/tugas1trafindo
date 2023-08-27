@@ -6,36 +6,18 @@ use CodeIgniter\Model;
 
 class TaskProjectModel extends Model
 {
-    protected $DBGroup          = 'default';
-    protected $table            = 'taskprojects';
-    protected $primaryKey       = 'id';
-    protected $useAutoIncrement = true;
-    protected $returnType       = 'array';
-    protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
-    protected $allowedFields    = [];
-
-    // Dates
+    protected $table = "task_project";
+    protected $primaryKey = "id";
+    protected $returnType = "array";
     protected $useTimestamps = false;
-    protected $dateFormat    = 'datetime';
-    protected $createdField  = 'created_at';
-    protected $updatedField  = 'updated_at';
-    protected $deletedField  = 'deleted_at';
+    protected $allowedFields = ['id_taskproduct', 'id_project',];
 
-    // Validation
-    protected $validationRules      = [];
-    protected $validationMessages   = [];
-    protected $skipValidation       = false;
-    protected $cleanValidationRules = true;
-
-    // Callbacks
-    protected $allowCallbacks = true;
-    protected $beforeInsert   = [];
-    protected $afterInsert    = [];
-    protected $beforeUpdate   = [];
-    protected $afterUpdate    = [];
-    protected $beforeFind     = [];
-    protected $afterFind      = [];
-    protected $beforeDelete   = [];
-    protected $afterDelete    = [];
+    public function getTaskProject($where = false)
+    {
+        if ($where === false) {
+            return $this->findAll();
+        } else {
+            return $this->getWhere($where);
+        }
+    }
 }

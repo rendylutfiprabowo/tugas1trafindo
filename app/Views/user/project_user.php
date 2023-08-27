@@ -42,6 +42,56 @@
                     <div class="pl-3 border-left btn-new">
                         <a href="#" class="btn btn-primary" data-target="#new-project-modal" data-toggle="modal">New Project</a>
                     </div>
+                    <!-- MODAL CREATE PROJECT -->
+                    <div class="modal fade" role="dialog" aria-modal="true" id="new-project-modal">
+                        <div class="modal-dialog  modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header d-block text-center pb-3 border-bttom">
+                                    <h3 class="modal-title" id="exampleModalCenterTitle01">New Project</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group mb-3">
+                                                <label for="exampleInputText01" class="h5">Project Name*</label>
+                                                <input type="text" class="form-control" id="exampleInputText01" placeholder="Project Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="exampleInputText2" class="h5">Categories *</label>
+                                                <select name="type" class="selectpicker form-control" data-style="py-0">
+                                                    <option>Category</option>
+                                                    <option>Android</option>
+                                                    <option>IOS</option>
+                                                    <option>Ui/Ux Design</option>
+                                                    <option>Development</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="exampleInputText004" class="h5">Due Dates*</label>
+                                                <input type="date" class="form-control" id="exampleInputText004" value="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="form-group mb-3">
+                                                <label for="exampleInputText07" class="h5">Assign Members*</label>
+                                                <input type="text" class="form-control" id="exampleInputText07">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="d-flex flex-wrap align-items-ceter justify-content-center mt-2">
+                                                <div class="btn btn-primary mr-3" data-dismiss="modal">Save</div>
+                                                <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,8 +107,8 @@
                         <div id="circle-progress-01" class="circle-progress-01 circle-progress circle-progress-primary" data-min-value="0" data-max-value="100" data-value="25" data-type="percent"></div>
                         <i class="ri-star-fill m-0 text-warning"></i>
                     </div>
-                    <h5 class="mb-1">Theme development</h5>
-                    <p class="mb-3">Preparing framework of block-based WordPress Theme.</p>
+                    <h5 class="mb-1">$project_name</h5>
+                    <p class="mb-3 text-justify">$deskription project <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis lacus. Phasellus et consequat erat. Suspendisse ullamcorper viverra velit, volutpat condimentum urna gravida vitae. Cras a urna consectetur, ultrices libero ut, convallis dui. Vivamus eu orci vel sapien venenatis rutrum nec ut mi. Etiam tempus finibus orci id aliquam. Sed rhoncus mollis justo sed pellentesque. Praesent molestie eu velit vitae vulputate. Etiam id magna nec lacus suscipit convallis.</p>
                     <div class="d-flex align-items-center justify-content-between pt-3 border-top">
                         <div class="iq-media-group">
                             <a href="#" class="iq-media">

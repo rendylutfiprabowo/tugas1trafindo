@@ -6,7 +6,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-between breadcrumb-content">
                 <h5>Your Task</h5>
                 <div class="d-flex flex-wrap align-items-center">
-                    <!-- <div class="dropdown dropdown-project mr-3">
+                    <div class="dropdown dropdown-project mr-3">
                         <div class="dropdown-toggle" id="dropdownMenuButton03" data-toggle="dropdown">
                             <div class="btn bg-body"><span class="h6">Project :</span> webkit Project<i class="ri-arrow-down-s-line ml-2 mr-0"></i></div>
                         </div>
@@ -15,7 +15,7 @@
                             <a class="dropdown-item" href="#"><i class="ri-attachment-line mr-2"></i>Priority</a>
                             <a class="dropdown-item" href="#"><i class="ri-file-copy-line mr-2"></i>Category</a>
                         </div>
-                    </div> -->
+                    </div>
                     <a href="#" class="btn btn-primary" data-target="#new-task-modal" data-toggle="modal">New Task</a>
                 </div>
             </div>
@@ -104,7 +104,6 @@
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <?php foreach ($tasks as $task) {?>
                 <div class="col-lg-12">
                     <div class="card card-widget task-card">
                         <div class="card-body">
@@ -119,7 +118,7 @@
                                     <div class="col-lg-11">
                                         <div>
                                             <h5 class="">Task-id-xx</h5>
-                                            <p class="text-justify"><?=$task->taskProduct()->first()->desc_taskproduct?> <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis lacus. Phasellus et consequat erat. Suspendisse ullamcorper viverra velit, volutpat condimentum urna gravida vitae. Cras a urna consectetur, ultrices libero ut, convallis dui. Vivamus eu orci vel sapien venenatis rutrum nec ut mi. Etiam tempus finibus orci id aliquam. Sed rhoncus mollis justo sed pellentesque. Praesent molestie eu velit vitae vulputate. Etiam id magna nec lacus suscipit convallis.</p>
+                                            <p class="text-justify">desc task-id-xx <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis lacus. Phasellus et consequat erat. Suspendisse ullamcorper viverra velit, volutpat condimentum urna gravida vitae. Cras a urna consectetur, ultrices libero ut, convallis dui. Vivamus eu orci vel sapien venenatis rutrum nec ut mi. Etiam tempus finibus orci id aliquam. Sed rhoncus mollis justo sed pellentesque. Praesent molestie eu velit vitae vulputate. Etiam id magna nec lacus suscipit convallis.</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-0.5">
@@ -132,7 +131,6 @@
                         </div>
                     </div>
                 </div>
-                <?php } ?>
             </div>
             <div class="collapse" id="collapseEdit1">
                 <div class="card card-list task-card">

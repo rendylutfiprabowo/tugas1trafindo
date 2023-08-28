@@ -8,7 +8,7 @@ class ProjectModel extends Model
 {
     protected $table = "project";
     protected $primaryKey = "id";
-    protected $returnType = "array";
+    protected $returnType = "object";
     protected $useTimestamps = false;
     protected $allowedFields = ['nama_project', 'desc_project', 'tgl_project',];
 

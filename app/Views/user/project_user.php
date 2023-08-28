@@ -7,7 +7,7 @@
             <div class="d-flex flex-wrap align-items-center justify-content-between breadcrumb-content">
                 <h5>Your Projects</h5>
                 <div class="d-flex flex-wrap align-items-center justify-content-between">
-                    <div class="dropdown status-dropdown mr-3">
+                    <!-- <div class="dropdown status-dropdown mr-3">
                         <div class="dropdown-toggle" id="dropdownMenuButton03" data-toggle="dropdown">
                             <div class="btn bg-body"><span class="h6">Status :</span> In Progress<i class="ri-arrow-down-s-line ml-2 mr-0"></i></div>
                         </div>
@@ -16,8 +16,8 @@
                             <a class="dropdown-item" href="#"><i class="ri-attachment-line mr-2"></i>Priority</a>
                             <a class="dropdown-item" href="#"><i class="ri-file-copy-line mr-2"></i>Category</a>
                         </div>
-                    </div>
-                    <div class="list-grid-toggle d-flex align-items-center mr-3">
+                    </div> -->
+                    <!-- <div class="list-grid-toggle d-flex align-items-center mr-3">
                         <div data-toggle-extra="tab" data-target-extra="#grid" class="active">
                             <div class="grid-icon mr-3">
                                 <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -38,7 +38,7 @@
                                 </svg>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="pl-3 border-left btn-new">
                         <a href="#" class="btn btn-primary" data-target="#new-project-modal" data-toggle="modal">New Project</a>
                     </div>
@@ -100,29 +100,20 @@
 </div>
 <div id="grid" class="item-content animate__animated animate__fadeIn active" data-toggle-extra="tab-content">
     <div class="row">
-        <div class="col-lg-4 col-md-6">
+        <?php
+            foreach ($projects as $project) {?>
+                <div class="col-lg-4 col-md-6">
             <div class="card card-block card-stretch card-height">
                 <div class="card-body">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <div id="circle-progress-01" class="circle-progress-01 circle-progress circle-progress-primary" data-min-value="0" data-max-value="100" data-value="25" data-type="percent"></div>
-                        <i class="ri-star-fill m-0 text-warning"></i>
-                    </div>
-                    <h5 class="mb-1">$project_name</h5>
-                    <p class="mb-3 text-justify">$deskription project <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis lacus. Phasellus et consequat erat. Suspendisse ullamcorper viverra velit, volutpat condimentum urna gravida vitae. Cras a urna consectetur, ultrices libero ut, convallis dui. Vivamus eu orci vel sapien venenatis rutrum nec ut mi. Etiam tempus finibus orci id aliquam. Sed rhoncus mollis justo sed pellentesque. Praesent molestie eu velit vitae vulputate. Etiam id magna nec lacus suscipit convallis.</p>
+                    <h5 class="mb-1"><?=$project->nama_project?></h5>
+                    <p class="mb-3 text-justify"><?=$project->desc_project?> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis lacus. Phasellus et consequat erat. Suspendisse ullamcorper viverra velit, volutpat condimentum urna gravida vitae. Cras a urna consectetur, ultrices libero ut, convallis dui. Vivamus eu orci vel sapien venenatis rutrum nec ut mi. Etiam tempus finibus orci id aliquam. Sed rhoncus mollis justo sed pellentesque. Praesent molestie eu velit vitae vulputate. Etiam id magna nec lacus suscipit convallis.</p>
                     <div class="d-flex align-items-center justify-content-between pt-3 border-top">
-                        <div class="iq-media-group">
-                            <a href="#" class="iq-media">
-                                <img class="img-fluid avatar-40 rounded-circle" src="../assets/images/user/05.jpg" alt="">
-                            </a>
-                            <a href="#" class="iq-media">
-                                <img class="img-fluid avatar-40 rounded-circle" src="../assets/images/user/06.jpg" alt="">
-                            </a>
-                        </div>
-                        <a class="btn btn-white text-primary link-shadow">High</a>
+                        <a class="btn btn-white text-primary link-shadow"><?=$project->tgl_project?></a>
                     </div>
                 </div>
             </div>
         </div>
+            <?php } ?>
     </div>
 </div>
 <div id="list" class="item-content animate__animated animate__fadeIn" data-toggle-extra="tab-content">

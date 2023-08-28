@@ -28,7 +28,7 @@ class TaskProject extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('id_taskproduct', 'product', 'id', 'CASCADE', 'CASCADE');
+        $this->forge->addForeignKey('id_taskproduct', 'task_product', 'id', 'CASCADE', 'CASCADE');
         $this->forge->addForeignKey('id_project', 'project', 'id', 'CASCADE', 'CASCADE');
         $this->forge->createTable('task_project');
     }

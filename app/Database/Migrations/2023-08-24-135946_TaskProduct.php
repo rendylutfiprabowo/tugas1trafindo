@@ -22,7 +22,7 @@ class TaskProduct extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '225'
             ],
-            'id_produk' => [
+            'id_product' => [
                 'type' => 'INT',
                 'constraint' =>10,
                 
@@ -37,6 +37,6 @@ class TaskProduct extends Migration
     
     public function down()
     {
-        $this->forge->dropTable('task_taskproduct');
+        $this->forge->dropTable('task_product');
     }
 }

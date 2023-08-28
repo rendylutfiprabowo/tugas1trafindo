@@ -33,10 +33,10 @@ $routes->get('/', 'Login::index');
 $routes->get('Login', 'Login::index');
 
 // ROUTE USER
-$routes->get('user/template', 'User::template');
-$routes->get('/task_user', 'User::index');
-$routes->get('/project_user', 'TaskProject::index');
-$routes->get('/note_user', 'Note::index');
+$routes->get('/profile', 'User::index');
+$routes->get('/task', 'TaskProject::index');
+$routes->get('/project', 'Project::index');
+$routes->get('/note', 'Note::index');
 
 // ROUTE ADMIN
 $routes->get('project', 'Project::index');

@@ -39,8 +39,13 @@ $routes->get('/project', 'Project::index');
 $routes->get('/note', 'Note::index');
 
 // ROUTE ADMIN
-$routes->get('project', 'Project::index');
 $routes->get('product', 'Product::index');
+$routes->get('showaddproduct', 'Product::add');
+$routes->post('addstore', 'Product::store');
+$routes->get('product/edit/(:segment)', 'Product::edit/$1');
+$routes->post('product/update/(:segment)', 'Product::update/$1');
+
+// $routes->get('product/delete/(:segment)', 'Product::delete/$1');
 
 $routes->post('/checklogin', "Login::do_login");
 $routes->get('/logout', "Login::logout");

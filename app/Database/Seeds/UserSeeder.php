@@ -38,12 +38,12 @@ class UserSeeder extends Seeder
             [
                 'nama_project' => 'TRAFO XXL',
                 'desc_project'    => 'Trafo XXL merupakan Trafo XXL merupakanTrafo XXL merupakanTrafo XXL merupakanTrafo XXL merupakan',
-                'tgl_project'=>date('Y-m-d H:i:s',strtotime('2024-08-15 15:30:00'))
+                'tgl_project' => date('Y-m-d H:i:s', strtotime('2024-08-15 15:30:00'))
             ],
             [
                 'nama_project' => 'TRAFO S',
                 'desc_project'    => 'Trafo S merupakan Trafo S merupakanTrafo S merupakanTrafo S merupakanTrafo S merupakan',
-                'tgl_project'=>date('Y-m-d H:i:s',strtotime('2024-08-15 15:30:00'))
+                'tgl_project' => date('Y-m-d H:i:s', strtotime('2024-08-15 15:30:00'))
             ],
         ];
         $task_products = [
@@ -55,16 +55,16 @@ class UserSeeder extends Seeder
             [
                 'nama_taskproduct' => 'Rakit',
                 'desc_taskproduct' => 'Rakit Setelah Bikin',
-                'id_product' => '1',
+                'id_product' => '2',
             ],
         ];
         $task_projects = [
             [
-                'id_taskproduct'=>'1',
+                'id_taskproduct' => '1',
                 'id_project' => '1',
             ],
             [
-                'id_taskproduct'=>'2',
+                'id_taskproduct' => '2',
                 'id_project' => '1',
 
             ],
@@ -76,7 +76,7 @@ class UserSeeder extends Seeder
                 'id_task' => '1',
             ],
         ];
-            // Add more user data here
+        // Add more user data here
 
 
         // Using Query Builder to insert data

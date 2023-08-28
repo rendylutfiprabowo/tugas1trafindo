@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = "product";
     protected $primaryKey = "id";
-    protected $returnType = "array";
+    protected $returnType = "object";
     protected $useTimestamps = false;
     protected $allowedFields = ['nama_product', 'desc_product', 'id_user',];
 
@@ -19,5 +19,10 @@ class ProductModel extends Model
         } else {
             return $this->getWhere($where);
         }
+    }
+
+    public function add($data)
+    {
+        $this->db->table('product')->insert($data);
     }
 }

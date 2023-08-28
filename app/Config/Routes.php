@@ -29,8 +29,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Login::index');
-$routes->get('Login', 'Login::index');
+
 
 // ROUTE USER
 $routes->get('/profile', 'User::index');
@@ -40,13 +39,13 @@ $routes->get('/note', 'Note::index');
 
 // ROUTE ADMIN
 $routes->get('product', 'Product::index');
-$routes->get('showaddproduct', 'Product::add');
-$routes->post('addstore', 'Product::store');
-$routes->get('product/edit/(:segment)', 'Product::edit/$1');
-$routes->post('product/update/(:segment)', 'Product::update/$1');
+$routes->add('product', 'Product::create');
+$routes->add('product/edit/(:segment)', 'Product::edit/$1');
+$routes->get('product/delete/(:segment)', 'Product::delete/$1');
 
-// $routes->get('product/delete/(:segment)', 'Product::delete/$1');
-
+//Auth
+$routes->get('/', 'Login::index');
+$routes->get('Login', 'Login::index');
 $routes->post('/checklogin', "Login::do_login");
 $routes->get('/logout', "Login::logout");
 

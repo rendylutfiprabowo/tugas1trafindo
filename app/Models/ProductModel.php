@@ -8,21 +8,16 @@ class ProductModel extends Model
 {
     protected $table = "product";
     protected $primaryKey = "id";
-    protected $returnType = "object";
+    // protected $returnType = "object";
     protected $useTimestamps = false;
     protected $allowedFields = ['nama_product', 'desc_product', 'id_user',];
 
-    public function getProduct($where = false)
+    public function getProduct($id = false)
     {
-        if ($where === false) {
+        if ($id === false) {
             return $this->findAll();
         } else {
-            return $this->getWhere($where);
+            return $this->getWhere(['id' => $id]);
         }
-    }
-
-    public function add($data)
-    {
-        $this->db->table('product')->insert($data);
     }
 }

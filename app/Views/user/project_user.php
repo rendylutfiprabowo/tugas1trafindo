@@ -51,42 +51,31 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
+                                        <form action="/project/add" method="post">
+                                        <?= csrf_field(); ?>
                                         <div class="col-lg-12">
                                             <div class="form-group mb-3">
-                                                <label for="exampleInputText01" class="h5">Project Name*</label>
-                                                <input type="text" class="form-control" id="exampleInputText01" placeholder="Project Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group mb-3">
-                                                <label for="exampleInputText2" class="h5">Categories *</label>
-                                                <select name="type" class="selectpicker form-control" data-style="py-0">
-                                                    <option>Category</option>
-                                                    <option>Android</option>
-                                                    <option>IOS</option>
-                                                    <option>Ui/Ux Design</option>
-                                                    <option>Development</option>
+                                                <label for="exampleInputText2" class="h5">Product *</label>
+                                                <select name="id_product" class="selectpicker form-control" data-style="py-0">
+                                                    <?php foreach ($products as $product) { ?>
+                                                        <option value="<?= $product->id ?>"><?= $product->nama_product ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group mb-3">
-                                                <label for="exampleInputText004" class="h5">Due Dates*</label>
-                                                <input type="date" class="form-control" id="exampleInputText004" value="">
-                                            </div>
-                                        </div>
                                         <div class="col-lg-12">
                                             <div class="form-group mb-3">
-                                                <label for="exampleInputText07" class="h5">Assign Members*</label>
-                                                <input type="text" class="form-control" id="exampleInputText07">
+                                                <label for="exampleInputText004" class="h5">Due Dates*</label>
+                                                <input name ="tgl_project" type="date" class="form-control" id="exampleInputText004" value="">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="d-flex flex-wrap align-items-ceter justify-content-center mt-2">
-                                                <div class="btn btn-primary mr-3" data-dismiss="modal">Save</div>
+                                                <button type="submit" class="btn btn-primary mr-3">Save</button>
                                                 <div class="btn btn-primary" data-dismiss="modal">Cancel</div>
                                             </div>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -106,9 +95,10 @@
             <div class="card card-block card-stretch card-height">
                 <div class="card-body">
                     <h5 class="mb-1"><?=$project->nama_project?></h5>
-                    <p class="mb-3 text-justify"><?=$project->desc_project?> <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu mollis lacus. Phasellus et consequat erat. Suspendisse ullamcorper viverra velit, volutpat condimentum urna gravida vitae. Cras a urna consectetur, ultrices libero ut, convallis dui. Vivamus eu orci vel sapien venenatis rutrum nec ut mi. Etiam tempus finibus orci id aliquam. Sed rhoncus mollis justo sed pellentesque. Praesent molestie eu velit vitae vulputate. Etiam id magna nec lacus suscipit convallis.</p>
+                    <p class="mb-3 text-justify"><?=$project->desc_project?> </p>
                     <div class="d-flex align-items-center justify-content-between pt-3 border-top">
                         <a class="btn btn-white text-primary link-shadow"><?=$project->tgl_project?></a>
+                        <a href="/project/<?= $project->id?>" class="btn btn-danger text-white link-shadow">More</a>
                     </div>
                 </div>
             </div>

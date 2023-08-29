@@ -22,4 +22,37 @@ class Note extends BaseController
             return redirect()->to(base_url('login'));
         }
     }
+
+    public function create()
+    {
+        $model = new NoteModel();
+        $model->insert([
+            'nama_notes'   => $this->request->getPost('nama_notes'),
+            'desc_notes' => $this->request->getPost('desc_notes'),
+            'id_task' => $this->request->getPost('id_task'),
+        ]);
+        $id = $this->request->getPost('id_task');
+
+        return redirect("task")->with('success', 'Data Added Successfully');
+    }
+
+    public function delete($id)
+    {
+        $model = new NoteModel();
+        $model->delete($id);
+
+        return redirect('task')->with('success', 'Data Deleted Successfully');
+    }
+
+    public function edit($id)
+    {
+        $model = new NoteModel();
+        $model->update($id, [
+            'nama_notes'   => $this->request->getPost('nama_notes'),
+            'desc_notes' => $this->request->getPost('desc_notes'),
+            // 'id_task' => $this->request->getPost('id_task'),
+        ]);
+
+        return redirect('task')->with('success', 'Data Updated Successfully');
+    }
 }

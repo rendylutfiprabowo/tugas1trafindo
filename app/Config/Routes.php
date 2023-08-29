@@ -33,15 +33,23 @@ $routes->set404Override();
 
 // ROUTE USER
 $routes->get('/profile', 'User::index');
-$routes->get('/task', 'TaskProject::index');
 $routes->get('/project', 'Project::index');
-$routes->get('/note', 'Note::index');
+$routes->get('/project/(:segment)', 'Project::tasks/$1');
+$routes->post('/project/add', 'Project::create');
+$routes->get('/task', 'TaskProject::index');
+$routes->get('/task/(:segment)', 'TaskProject::notes/$1');
+$routes->get('/task/completed/(:segment)', 'TaskProject::complete/$1');
+$routes->add('/note/add', 'Note::create');
+$routes->post('/note/edit/(:segment)', 'Note::edit/$1');
+$routes->get('/note/delete/(:segment)', 'Note::delete/$1');
+// $routes->get('/note', 'Note::index');
 
 // ROUTE ADMIN
 $routes->get('product', 'Product::index');
 $routes->add('product', 'Product::create');
 $routes->add('product/edit/(:segment)', 'Product::edit/$1');
 $routes->get('product/delete/(:segment)', 'Product::delete/$1');
+$routes->add('product/(:segment)', 'Product::task/$1');
 
 //Auth
 $routes->get('/', 'Login::index');

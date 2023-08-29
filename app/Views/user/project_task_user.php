@@ -4,19 +4,7 @@
     <div class="card">
         <div class="card-body">
             <div class="d-flex flex-wrap align-items-center justify-content-between breadcrumb-content">
-                <h5>All Tasks</h5>
-                <div class="d-flex flex-wrap align-items-center">
-                    <!-- <div class="dropdown dropdown-project mr-3">
-                        <div class="dropdown-toggle" id="dropdownMenuButton03" data-toggle="dropdown">
-                            <div class="btn bg-body"><span class="h6">Project :</span> webkit Project<i class="ri-arrow-down-s-line ml-2 mr-0"></i></div>
-                        </div>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton03">
-                            <a class="dropdown-item" href="#"><i class="ri-mic-line mr-2"></i>In Progress</a>
-                            <a class="dropdown-item" href="#"><i class="ri-attachment-line mr-2"></i>Priority</a>
-                            <a class="dropdown-item" href="#"><i class="ri-file-copy-line mr-2"></i>Category</a>
-                        </div>
-                    </div> -->
-                </div>
+                <h5>Project : <?= $project->nama_project ?></h5>
             </div>
         </div>
     </div>
@@ -125,8 +113,9 @@
                                     </div>
                                     <div class="col-lg-0.5">
                                         <div class="media align-items-center mt-md-0 mt-3">
-                                            <a href="/task/<?= $task->task_project_id ?>" class="btn bg-secondary-light">Notes</a>
-                                            <a href="/task/completed/<?= $task->task_project_id ?>" class="btn bg-secondary-light">Mark As Complete</a>
+                                            <a href="/task/<?= $task->id ?>" class="btn bg-secondary-light">Notes</a>
+                                            <a href="/task/completed/<?= $task->id ?>" class="btn bg-secondary-light">Mark As Complete</a>
+                                            <!-- <a class="btn bg-secondary-light" data-toggle="collapse" href="#collapseEdit1" role="button" aria-expanded="false" aria-controls="collapseEdit1"><i class="ri-edit-box-line m-0">Notes</i></a> -->
                                         </div>
                                     </div>
                                 </div>

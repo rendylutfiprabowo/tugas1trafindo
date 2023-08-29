@@ -24,6 +24,11 @@ class TaskProject extends Migration
                 'constraint' => 10,
 
             ],
+            'completed' => [
+                'type' => 'VARCHAR',
+                'constraint' => '225',
+                'default' => 'NOT COMPLETED',
+            ],
             // ... add other columns
         ]);
 

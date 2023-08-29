@@ -8,7 +8,7 @@ class ProductModel extends Model
 {
     protected $table = "product";
     protected $primaryKey = "id";
-    // protected $returnType = "object";
+    protected $returnType = "object";
     protected $useTimestamps = false;
     protected $allowedFields = ['nama_product', 'desc_product', 'id_user',];
 
@@ -19,5 +19,18 @@ class ProductModel extends Model
         } else {
             return $this->getWhere(['id' => $id]);
         }
+    }
+
+    public function getTasks($id = false){
+        $builder = $this->db->table('task_product');
+        $builder->join('product','product.id = task_product.id_product');
+        $builder->join('task_product','task_product.id = task_product.id_taskproduct');
+        if ($where === false) {
+            $query = $builder->get();
+            return $query->getResult();
+        }
+        $builder->where('task_product'.'.id_product', $where);
+        $query = $builder->get();
+        return $query->getResult();
     }
 }

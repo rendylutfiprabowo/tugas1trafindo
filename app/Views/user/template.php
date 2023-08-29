@@ -44,7 +44,7 @@
             <div class="iq-sidebar-logo d-flex align-items-center mb-0 my-2">
                 <a href="#" class="header-logo pt-6">
                     <img style="margin-right: 20px;" src="..\img\Logo Trafoindo.png">
-                    <h5 style="font-family:shelf_life; color:#c82424; font-size: 35px;" class="logo-title light-logo">Task Management</h5>
+                    <h5 style="font-family:shelf_life; color:#c82424; font-size: 35px;" class="logo-title light-logo">Task Tracker</h5>
                 </a>
                 <div class="iq-menu-bt-sidebar ml-0">
                     <i class="las la-bars wrapper-menu"></i>
@@ -72,7 +72,7 @@
                                 <span class="ml-4">Task</span>
                             </a>
                         </li>
-                        <li class="">
+                        <!-- <li class="">
                             <a href="/note" class="svg-icon">
                                 <svg class="svg-icon" width="25" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -81,7 +81,7 @@
                                 </svg>
                                 <span class="ml-4">Note</span>
                             </a>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </nav>
@@ -101,7 +101,7 @@
                         </a>
                     </div>
                     <div class="navbar-breadcrumb">
-                        <h5>$title</h5>
+                        <!-- <h5>$title</h5> -->
                     </div>
                     <div class="d-flex align-items-center">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
@@ -109,14 +109,14 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto navbar-list align-items-center">
-                                <li>
+                                <!-- <li>
                                     <div class="iq-search-bar device-search">
                                         <form action="#" class="searchbox">
                                             <a class="search-link" href="#"><i class="ri-search-line"></i></a>
                                             <input type="text" class="text search-input" placeholder="Search here...">
                                         </form>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="nav-item nav-icon search-content">
                                     <a href="#" class="search-toggle rounded" id="dropdownSearch" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="ri-search-line"></i>

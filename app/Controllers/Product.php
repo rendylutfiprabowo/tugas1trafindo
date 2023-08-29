@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ProductModel;
+use App\Models\TaskProductModel;
 
 class Product extends BaseController
 {
@@ -16,7 +17,7 @@ class Product extends BaseController
 
     public function index()
     {
-        $data['products'] = $this->product->findAll();
+        $data['products'] = $this->product->asArray()->findAll();
 
         return view('admin/product_admin', $data);
     }
@@ -30,6 +31,14 @@ class Product extends BaseController
         ]);
 
         return redirect('product')->with('success', 'Data Added Successfully');
+    }
+
+    public function task($id){
+        $model = new TaskProductModel();
+        $data['product'] = $this->product->find($id);
+        $data['tasks'] = $model->where('id_product',$id)->findAll();
+
+        return view('admin/product_task_admin', $data);
     }
 
     public function edit($id)

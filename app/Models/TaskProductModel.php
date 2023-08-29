@@ -12,11 +12,7 @@ class TaskProductModel extends Model
     protected $useTimestamps = false;
     protected $allowedFields = ['nama_taskproduct', 'desc_taskproduct', 'id_product',];
 
-    public function taskProject(){
-        return $this->hasMany(TaskProjectModel::Class,'id');
-    }
-
-    public function getTaskProduct($where = false)
+    public function getTaskProject($where = false)
     {
         if ($where === false) {
             return $this->findAll();
@@ -24,4 +20,5 @@ class TaskProductModel extends Model
             return $this->getWhere($where);
         }
     }
+
 }

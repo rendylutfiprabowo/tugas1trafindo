@@ -12,12 +12,17 @@ class ProjectModel extends Model
     protected $useTimestamps = false;
     protected $allowedFields = ['nama_project', 'desc_project', 'tgl_project',];
 
-    public function getProject($where = false)
+    public function getTasks($where = false)
     {
+        $builder = $this->db->table('task_project');
+        $builder->join('project','project.id = task_project.id_project');
+        $builder->join('task_product','task_product.id = task_project.id_taskproduct');
         if ($where === false) {
-            return $this->findAll();
-        } else {
-            return $this->getWhere($where);
+            $query = $builder->get();
+            return $query->getResult();
         }
+        $builder->where('task_project'.'.id_project', $where);
+        $query = $builder->get();
+        return $query->getResult();
     }
 }

@@ -21,15 +21,16 @@ class ProductModel extends Model
         }
     }
 
-    public function getTasks($id = false){
+    public function getTasks($id = false)
+    {
         $builder = $this->db->table('task_product');
-        $builder->join('product','product.id = task_product.id_product');
-        $builder->join('task_product','task_product.id = task_product.id_taskproduct');
-        if ($where === false) {
+        $builder->join('product', 'product.id = task_product.id_product');
+        $builder->join('task_product', 'task_product.id = task_product.id_taskproduct');
+        if ($id === false) {
             $query = $builder->get();
             return $query->getResult();
         }
-        $builder->where('task_product'.'.id_product', $where);
+        $builder->where('task_product' . '.id_product', $id);
         $query = $builder->get();
         return $query->getResult();
     }

@@ -32,7 +32,7 @@
               <th>No</th>
               <th>Task</th>
               <th>Desc</th>
-              <th>Aksi</th>
+              <th width="20%">Aksi</th>
             </tr>
           </thead>
           <tbody>
@@ -40,11 +40,12 @@
               <tr>
                 <td><?= ++$key ?></td>
                 <td><?= $task->nama_taskproduct ?></td>
-                <td><?= $product->desc_product ?></td>
+                <td><?= $task->desc_taskproduct ?></td>
                 <td>
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal-<?= $product->id ?>">
                     Edit
                   </button>
+                  <a href="<?= base_url('taskproduct/delete/' . $task->id) ?>" class="btn btn-danger" onclick="return confirm('Are you sure ?')">Delete</a>
                 </td>
                 </td>
               </tr>
@@ -53,21 +54,21 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Edit Task Product</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </button>
                     </div>
-                    <form action="<?= base_url('product/edit/' . $task->id) ?>" method="post">
+                    <form action="<?= base_url('taskproduct/edit/' . $task->id) ?>" method="post">
                       <?= csrf_field(); ?>
                       <div class="modal-body">
                         <div class="form-group">
                           <label for="name">Nama Task</label>
-                          <input type="text" name="nama_product" class="form-control" value="<?= $task->nama_taskproduct ?>" id="nama_product" placeholder="Nama Product" required>
+                          <input type="text" name="nama_taskproduct" class="form-control" value="<?= $task->nama_taskproduct ?>" id="nama_taskproduct" placeholder="Nama Task Product" required>
                         </div>
                         <div class="form-group">
                           <label for="desc">Deskripsi Produk</label>
-                          <textarea type="text" name="desc_product" class="form-control" value="<?= $task->desc_taskproduct ?>" id="desc_product" placeholder="Masukan Deskripsi"></textarea>
-                          <input hidden type="text" class="form-control" name="id_user" value="<?= session()->get('id') ?>">
+                          <textarea type="text" name="desc_taskproduct" class="form-control" value="<?= $task->desc_taskproduct ?>" id="desc_product" placeholder="Masukan Deskripsi Task"></textarea>
+                          <input hidden type="text" class="form-control" name="id_product" value="<?= $product->id ?>">
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -92,17 +93,17 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Task untuk Product : <?= $product->nama_product ?></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="<?= base_url('product') ?>" method="post">
+      <form action="<?= base_url('taskproduct') ?>" method="post">
         <?= csrf_field(); ?>
         <div class="modal-body">
           <div class="form-group">
             <label for="name">Nama Task</label>
-            <input type="text" name="nama_product" class="form-control" id="nama_product" placeholder="Nama Product" required>
+            <input type="text" name="nama_taskproduct" class="form-control" id="nama_product" placeholder="Masukkan Nama Task Product" required>
           </div>
           <div class="form-group">
             <label for="desc">Deskripsi Task</label>
-            <textarea type="text" name="desc_product" class="form-control" id="desc_product" placeholder="Masukan Deskripsi"></textarea>
-            <input hidden type="text" class="form-control" name="id_user" value="<?= session()->get('id') ?>">
+            <textarea type="text" name="desc_taskproduct" class="form-control" id="desc_taskproduct" placeholder="Masukan Deskripsi"></textarea>
+            <input hidden type="text" class="form-control" name="id_product" value="<?= $product->id ?>">
           </div>
         </div>
         <div class="modal-footer">

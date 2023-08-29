@@ -103,37 +103,37 @@
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <?php foreach ($tasks as $task) {?>
-                <div class="col-lg-12">
-                    <div class="card card-widget task-card">
-                        <div class="card-body">
-                            <div class="d-flex flex-wrap align-items-center justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <div class="col-lg-0.5 ">
-                                        <div class="custom-control custom-task custom-checkbox custom-control-inline">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck01">
-                                            <label class="custom-control-label" for="customCheck01"></label>
+                <?php foreach ($tasks as $task) { ?>
+                    <div class="col-lg-12">
+                        <div class="card card-widget task-card">
+                            <div class="card-body">
+                                <div class="d-flex flex-wrap align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <div class="col-lg-0.5 ">
+                                            <div class="custom-control custom-task custom-checkbox custom-control-inline">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck01">
+                                                <label class="custom-control-label" for="customCheck01"></label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-11">
-                                        <div>
-                                            <h5 class=""><?=$task->nama_taskproduct?></h5>
-                                            <h6 class=""><?=$task->nama_project?></h6>
-                                            <h6 class=""><?=$task->tgl_project?></h6>
-                                            <p class="text-justify"> <br><?=$task->nama_taskproduct?></p>
+                                        <div class="col-lg-11">
+                                            <div>
+                                                <h5 class=""><?= $task->nama_taskproduct ?></h5>
+                                                <h6 class=""><?= $task->nama_project ?></h6>
+                                                <h6 class=""><?= $task->tgl_project ?></h6>
+                                                <p class="text-justify"> <br><?= $task->nama_taskproduct ?></p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-0.5">
-                                        <div class="media align-items-center mt-md-0 mt-3">
-                                            <a href="/task/<?= $task->task_project_id ?>" class="btn bg-secondary-light">Notes</a>
-                                            <a href="/task/completed/<?= $task->task_project_id ?>" class="btn bg-secondary-light">Mark As Complete</a>
+                                        <div class="col-lg-0.5">
+                                            <div class="media align-items-center mt-md-0 mt-3">
+                                                <a href="/task/<?= $task->task_project_id ?>" class="btn bg-secondary-light">Notes</a>
+                                                <a href="/task/completed/<?= $task->task_project_id ?>" class="btn bg-secondary-light">Mark As Complete</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
             <div class="collapse" id="collapseEdit1">

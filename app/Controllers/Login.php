@@ -43,7 +43,7 @@ class Login extends BaseController
                     if (session()->get('role_user') == '1') {
                         return redirect()->to('product');
                     } elseif (session()->get('role_user') == '2') {
-                        return redirect()->to('profile');
+                        return redirect()->to('/project');
                     }
                 } else {
                     $session = session();

@@ -49,7 +49,11 @@ $routes->get('product', 'Product::index');
 $routes->add('product', 'Product::create');
 $routes->add('product/edit/(:segment)', 'Product::edit/$1');
 $routes->get('product/delete/(:segment)', 'Product::delete/$1');
-$routes->add('product/(:segment)', 'Product::task/$1');
+$routes->get('product/(:segment)', 'Product::task/$1');
+$routes->get('taskproducts/(:segment)', 'TaskProduct::index/$1');
+$routes->get('taskproduct/delete/(:segment)', 'TaskProduct::delete/$1');
+$routes->add('taskproduct', 'TaskProduct::create');
+$routes->add('taskproduct/edit/(:segment)', 'TaskProduct::edit/$1');
 
 //Auth
 $routes->get('/', 'Login::index');

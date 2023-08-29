@@ -45,7 +45,7 @@
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal-<?= $product['id'] ?>">
                     Edit
                   </button>
-                  <a href="<?= base_url('product/' . $product['id']) ?>" class="btn btn-info" >Tasks</a>
+                  <a href="<?= base_url('product/' . $product['id']) ?>" class="btn btn-info">Tasks</a>
                   <a href="<?= base_url('product/delete/' . $product['id']) ?>" class="btn btn-danger" onclick="return confirm('Are you sure ?')">Delete</a>
                 </td>
                 </td>
@@ -98,11 +98,11 @@
         <?= csrf_field(); ?>
         <div class="modal-body">
           <div class="form-group">
-            <label for="name">Nama Product</label>
+            <label class="h5" for="name">Nama Product</label>
             <input type="text" name="nama_product" class="form-control" id="nama_product" placeholder="Nama Product" required>
           </div>
           <div class="form-group">
-            <label for="desc">Deskripsi Produk</label>
+            <label class="h5" for="desc">Deskripsi Produk</label>
             <textarea type="text" name="desc_product" class="form-control" id="desc_product" placeholder="Masukan Deskripsi"></textarea>
             <input hidden type="text" class="form-control" name="id_user" value="<?= session()->get('id') ?>">
           </div>

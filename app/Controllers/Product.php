@@ -33,10 +33,11 @@ class Product extends BaseController
         return redirect('product')->with('success', 'Data Added Successfully');
     }
 
-    public function task($id){
+    public function task($id)
+    {
         $model = new TaskProductModel();
         $data['product'] = $this->product->find($id);
-        $data['tasks'] = $model->where('id_product',$id)->findAll();
+        $data['tasks'] = $model->where('id_product', $id)->findAll();
 
         return view('admin/product_task_admin', $data);
     }

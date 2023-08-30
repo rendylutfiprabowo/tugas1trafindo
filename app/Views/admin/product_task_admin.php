@@ -42,7 +42,7 @@
                 <td><?= $task->nama_taskproduct ?></td>
                 <td><?= $task->desc_taskproduct ?></td>
                 <td>
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal-<?= $product->id ?>">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal-<?= $task->id ?>">
                     Edit
                   </button>
                   <a href="<?= base_url('taskproduct/delete/' . $task->id) ?>" class="btn btn-danger" onclick="return confirm('Are you sure ?')">Delete</a>
